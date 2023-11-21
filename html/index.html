@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhysCore - Projeto Científico</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        /* Estilo global para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #380548; /* Fundo roxo escuro */
+            color: #FFFFFF; /* Texto branco */
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); /* Fundo estrelado */
+        }
+
+        /* Estilo do cabeçalho */
+        header {
+            background-color: #680DD0; /* Fundo roxo claro para o cabeçalho */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Estilo do menu de navegação */
+        nav {
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo do menu com transparência */
+            color: white;
+            text-align: center;
+        }
+
+        /* Estilo dos links no menu de navegação */
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+
+        /* Estilo dos links no menu de navegação quando hover */
+        nav a:hover {
+            background-color: rgba(0, 0, 0, 0.7); /* Fundo mais escuro ao passar o mouse */
+        }
+
+        /* Container principal com largura máxima e centralizado */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2px;
+        }
+
+        /* Estilo do conteúdo da página */
+        .content {
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo das caixas de tópicos */
+        .topic-box {
+            background-color: transparent; /* Fundo transparente para os tópicos */
+            padding: 0px;
+            margin: 0px 0;
+            border-radius: 10px;
+            display: flex; /* Container flex para alinhar verticalmente */
+            align-items: center; /* Alinhar verticalmente ao centro */
+        }
+
+        /* Estilo das bolinhas de tópicos */
+        .bullet {
+            background-color: #FADF61; /* Fundo amarelo para a bolinha */
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-right: 10px;
+            flex-shrink: 0; /* Impedir a redução da bolinha */
+        }
+
+        /* Estilo dos títulos de seção */
+        .section-title {
+            background-color: transparent; /* Fundo transparente para os títulos de seção */
+            padding: 2px 10px; /* Espaçamento interno dos títulos */
+            margin-bottom: 0px;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-flex; /* Container flex para alinhar verticalmente */
+            align-items: center; /* Alinhar verticalmente ao centro */
+            width: auto; /* Largura automática */
+        }
+
+        /* Estilo do texto dos títulos de seção */
+        .section-title-text {
+            color: #680DD0; /* Cor roxa para o texto do título da seção */
+            font-size: 1.2em;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            background-color: #FADF61; /* Fundo amarelo para o texto do título */
+            padding: 2px 5px; /* Espaçamento interno dos títulos */
+            border-radius: 5px;
+        }
+
+        /* Estilo para destacar palavras-chave */
+        .highlight {
+            color: #F02546; /* Cor vermelha para palavras-chave */
+        }
+
+        /* Estilo das caixas de texto */
+        .text-box {
+            background-color: transparent; /* Fundo transparente para as caixas de texto */
+            padding: 0px; /* Espaçamento interno das caixas de texto */
+            border-radius: 5px;
+            width: calc(100% - 25px); /* Largura das caixas de texto */
+            margin-left: 25px; /* Espaço à esquerda para a bolinha */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PhysCore</h1>
+        <p>Explorando o Universo através da Ciência</p>
+    </header>
+    <nav>
+        <a href="#index.html">Sobre Nós</a>
+        <a href="apostilas.php">Materiais de Estudo</a>
+        <a href="materiais_estudos.php">Biblioteca</a>
+        <a href="olimpiadas.html">Olimpíadas</a>
+        <a href="softwares.html">Softwares</a>
+        <a href="incentivo.html">Incentivo Científico</a>
+        <a href="ic.html">Iniciação Científica</a>
+        <a href="login.html">Login</a>
+        <a href="registro.html">Registro</a>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <!-- Conteúdo da página -->
+            <h2>Bem-vindo ao PhysCore</h2>
+            <p>Seu portal para descobrir e explorar o mundo da ciência, com foco especial em astronomia.</p>
+            <p>Navegue pelo menu acima para aprender mais sobre nossos projetos e recursos.</p>
+            
+            <!-- Tópico: Ideia -->
+            <div class="topic-box">
+				<div class="section-title">
+					<div class="bullet"></div>
+					<h3 class="section-title-text">Ideia</h3>
+				</div>
+            </div>
+            <div class="text-box">
+                <p>O <span class="highlight">Projeto PhysCore</span> é uma iniciativa inovadora que utiliza as redes sociais como plataforma para divulgar a ciência e inspirar jovens a se integrarem ao mundo da física.</p>
+            </div>
+            
+            <!-- Tópico: O que fazemos -->
+            <div class="topic-box">
+				<div class="section-title">
+					<div class="bullet"></div>
+					<h3 class="section-title-text">O que fazemos</h3>
+				</div>
+            </div>
+            <div class="text-box">
+                <p>Nossas equipes de cientistas e educadores trabalham incansavelmente para criar conteúdo educacional envolvente, incluindo vídeos, artigos e interações interativas que tornam os conceitos científicos acessíveis a todos.</p>
+                <p>Com uma abordagem cativante e criativa, estamos comprometidos em mostrar como a física está presente em nossa vida cotidiana, desde a tecnologia que usamos até os fenômenos naturais que observamos.</p>
+            </div>
+            
+            <!-- Tópico: O que já fizemos -->
+            <div class="topic-box">
+				<div class="section-title">
+					<div class="bullet"></div>
+					<h3 class="section-title-text">O que já fizemos</h3>
+				</div>
+            </div>
+            <div class="text-box">
+                <p>Ao longo dos anos, já realizamos inúmeras palestras, workshops e eventos em escolas e comunidades, despertando a curiosidade e o interesse dos jovens pela ciência e pela física.</p>
+                <p>Além disso, nossas postagens nas redes sociais alcançaram milhões de pessoas, proporcionando um ambiente virtual de aprendizado e interação.</p>
+            </div>
+            
+            <!-- Tópico: Nossos serviços -->
+            <div class="topic-box">
+				<div class="section-title">
+					<div class="bullet"></div>
+					<h3 class="section-title-text">Nossos serviços</h3>
+				</div>
+            </div>
+            <div class="text-box">
+                <p>Oferecemos uma variedade de recursos, como vídeos educativos, artigos informativos e desafios científicos para estimular a mente criativa dos jovens.</p>
+                <p>Além disso, nossa equipe está sempre disponível para responder a perguntas e orientar os interessados em mergulhar no emocionante mundo da física.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhysCore - Projeto Científico</title>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <style>
+        .form-register{
+            display: flex;
+            flex-direction: column;
+            width: 80%; /* Ajuste o valor conforme necessário */
+            max-width: 600px;
+            border-radius: 16px;
+            background-color: rgba(0, 0, 0, 0.5);  /* Adicione uma transparência ao fundo branco */
+            color: #fff;
+            padding: 28px;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 7.3);
+            
+        }
+
+        .form-register span{
+            color:white;
+        }
+
+        .form-register h2{
+            color: white;
+        }
+
+        label{
+            color:white;
+            display: block;
+            margin: 1em;
+        }
+        .password-container {
+            position: relative;
+        }
+
+        .password-container .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        .btn-submit{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PhysCore</h1>
+        <p>Explorando o Universo através da Ciência</p>
+    </header>
+    <nav>
+        <a href="#index.html">Sobre Nós</a>
+        <a href="apostilas.php">Materiais de Estudo</a>
+        <a href="olimpiadas.html">Olimpíadas</a>
+        <a href="softwares.html">Softwares</a>
+        <a href="incentivo.html">Incentivo Científico</a>
+        <a href="ic.html">Iniciação Científica</a>
+        <a href="login.html">Login</a>
+        <a href="registro.html">Registro</a>
+    </nav>
+
+    <div class="form-register">
+        <h2>Criar Conta</h2>
+        <form action="registro_process.php" method="post">
+            <label for="tipo_usuario">Tipo de Usuário:</label>
+            <input type="radio" name="tipo_usuario" value="Aluno" required>
+            <span class="css-you">Aluno</span>
+            <input type="radio" name="tipo_usuario" value="Professor" required>
+            <span class="css-you">Professor</span>
+            
+            <br><br>
+
+            <label for="username">Nome de Usuário:</label>
+            <input type="text" name="username" id="username" placeholder="Digite seu Nome de Usuário"><br>
+
+            <label for="password">Senha:</label>
+            <input type="password" name="password" id="password" placeholder="Digite sua senha" required><br>
+           
+            <label for="confirmPassword">Confirmar Senha:</label>
+            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirme sua senha" required><br>
+            <div id="errorMessage" name="errorMessage"></div>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Digite seu email de contato" required><br>
+            <div id="errorMessage" name="errorMessage"></div>
+            <br><br>
+
+            <input class="btn-submit" type="submit" value="Registrar" onclick="return validatePassword()">
+        </form>
+    </div>
+   
+    <script src="../js/script.js"></script>
+</body>
+</html>
