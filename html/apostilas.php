@@ -154,11 +154,8 @@
     <nav>
         <a href="index.html">Sobre Nós</a>
         <a href="apostilas.php">Materiais de Estudo</a>
-        <a href="materiais_estudos.php">Biblioteca</a>
 		<a href="olimpiadas.html">Olimpíadas</a>
         <a href="softwares.html">Softwares</a>
-        <a href="incentivo.html">Incentivo Científico</a>
-        <a href="ic.html">Iniciação Científica</a>
         <a href="login.html">Login</a>
         <a href="registro.html">Registro</a>
         <a href="logout.php">Logout</a>
