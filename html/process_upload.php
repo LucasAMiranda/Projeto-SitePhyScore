@@ -3,6 +3,7 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
+
 if (isset($_POST['submit'])) {
     $targetDirectory = "pdf/";
 
@@ -38,4 +39,5 @@ if (isset($_POST['submit'])) {
         header('Location: materiais_estudos.php');
     }
 }
+
 ?>

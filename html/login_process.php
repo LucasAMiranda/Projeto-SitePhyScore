@@ -1,5 +1,4 @@
 <?php
-session_start();
 // Conectar ao banco de dados 
 $servername = "localhost";
 $username = "root";
@@ -14,8 +13,9 @@ if ($conn->connect_error) {
 }
 
 // Recebe dados do formulário
-$username = mysqli_real_escape_string($conn, $_POST['username']);
-$password = mysqli_real_escape_string($conn, $_POST['password']);
+$username = isset($_POST['username']) ? mysqli_real_escape_string($conn, $_POST['username']) : "";
+$password = isset($_POST['password']) ? mysqli_real_escape_string($conn, $_POST['password']) : "";
+
 
 // Busca o usuário no banco de dados
 $sql = "SELECT * FROM usuarios WHERE username = ?";
@@ -31,18 +31,18 @@ if ($result->num_rows > 0) {
     if (password_verify($password, $row['password'])) {
         // Redireciona o usuário com base no tipo de usuário
         if ($row['tipo_usuario'] == 'Professor') {
-            echo "Bem vido Professor ". $username;
+            echo "Bem vindo Professor ". $username;
             // Redireciona para a página do professor com links para o fórum, adição de apostilas, etc.
             header("Location: apostilas.php");
             exit();
-        } 
-    } else {
-        echo "Senha incorreta.";
+        }else if ($row['tipo_usuario'] == 'Aluno'){
+            echo "Bem vindo Aluno ". $username;
+            // Redireciona para a página do professor com links para o fórum, adição de apostilas, etc.
+            header("Location: materiais_estudos.php");
+            exit();
+        }
     }
-} else {
-    echo "Usuário não encontrado.";
 }
-
 $stmt->close();
 $conn->close();
 ?>

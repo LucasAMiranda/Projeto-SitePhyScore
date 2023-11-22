@@ -1,5 +1,10 @@
 <?php
     include 'process_upload.php';
+    include 'login_process.php';
+
+    if(isset($_POST['$tipo_usuario'])==='Aluno'){
+        echo '<span><a href="pdf/' . $filename . '" class="apostila-link" download>' . $filename . '</a></span><br><br>'; 
+    }
 ?>
 
 <!DOCTYPE html>
@@ -44,15 +49,17 @@
                 <br>
 
                 <?php
+                
                 // Verifica se 'uploadedFiles' está definido e não é nulo
-                if (isset($_SESSION['uploadedFiles']) && is_array($_SESSION['uploadedFiles'])) {
-                    // Loop através dos arquivos enviados
-                    foreach ($_SESSION['uploadedFiles'] as $filename) {
-                        echo '<span><a href="pdf/' . $filename . '" class="apostila-link" download>' . $filename . '</a></span><br><br>';
+                    if (isset($_SESSION['uploadedFiles']) && is_array($_SESSION['uploadedFiles'])) {
+                        // Loop através dos arquivos enviados
+                        foreach ($_SESSION['uploadedFiles'] as $filename) {
+                            echo '<span><a href="pdf/' . $filename . '" class="apostila-link" download>' . $filename . '</a></span><br><br>';
+                        }
+                    } else {
+                        echo '<p>Nenhum material disponível.</p>';
                     }
-                } else {
-                    echo '<p>Nenhum material disponível.</p>';
-                }
+               
                 ?>
             </div>
         </div>
